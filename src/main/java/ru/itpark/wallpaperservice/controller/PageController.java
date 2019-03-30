@@ -29,7 +29,7 @@ public class PageController {
                              @RequestParam int rollLength)
     {
 
-        String rollAmount = calculate(model, roomLength, roomWidth, roomHeight, rollWidth, rollLength);
+        int rollAmount = service.calculate(roomLength, roomWidth, roomHeight, rollWidth, rollLength);
         model.addAttribute("result", rollAmount);
         return "mypage";
     }

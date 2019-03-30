@@ -10,4 +10,6 @@ public class WallpaperApplication {
         SpringApplication.run(WallpaperApplication.class, args);
     }
 
-}
+
+    }
+

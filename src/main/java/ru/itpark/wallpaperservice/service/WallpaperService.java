@@ -10,6 +10,7 @@ public class WallpaperService {
         int piecesInOneRoll = rollLength/roomHeight;
         int rollAmount = wallpaperPiece/piecesInOneRoll;
 
+
         return rollAmount;}
 
 
