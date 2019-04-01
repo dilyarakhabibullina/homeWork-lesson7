@@ -1,13 +1,14 @@
 package ru.itpark.wallpaperservice.service;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class WallpaperServiceTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void calculate() {
         WallpaperService service = new WallpaperService();
         int result = service.calculate(6, 5, 3, 1, 10);
-        assertEquals(7, result);
+        assertEquals(10, result);
     }
 }
