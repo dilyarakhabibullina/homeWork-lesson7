@@ -15,21 +15,22 @@ public class PageController {
     }
 
     @RequestMapping
-    public String page(Model model) {
-        model.addAttribute("title", "some value");
+    public String index(Model model) {
+        model.addAttribute("title", "Some value");
         return "mypage";
     }
 
-   @RequestMapping (params = {"roomLength", "roomWidth", "roomHeight", "rollWidth", "rollLength"})
-    public String calculate (Model model,
-                             @RequestParam int roomLength,
-                             @RequestParam int roomWidth,
-                             @RequestParam int roomHeight,
-                             @RequestParam int rollWidth,
-                             @RequestParam int rollLength)
+    @RequestMapping(params = {"roomLength", "roomWidth", "roomHeight", "rollLength", "rollWidth"})
+    public String calculate(Model model,
+                            @RequestParam int roomLength,
+                            @RequestParam int roomWidth,
+                            @RequestParam int roomHeight,
+                            @RequestParam int rollLength,
+                            @RequestParam int rollWidth)
+
     {
 
-        int rollAmount = service.calculate(roomLength, roomWidth, roomHeight, rollWidth, rollLength);
+        int rollAmount = service.calculate(roomLength, roomWidth, roomHeight, rollLength, rollWidth);
         model.addAttribute("result", rollAmount);
         return "mypage";
     }
